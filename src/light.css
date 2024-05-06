@@ -1,0 +1,94 @@
+.light {
+  width: 100px;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  margin: 8px;
+}
+.signal {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.light:nth-child(1) .signal.stop {
+  animation-name: race;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-in; */
+}
+
+.light:nth-child(2) .signal.stop {
+  animation-name: race;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-in; */
+}
+
+.light:nth-child(3) .signal.stop {
+  animation-name: race;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-in; */
+}
+
+.light:nth-child(4) .signal.stop {
+  animation-name: race;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-in; */
+}
+
+.light:nth-child(5) .signal.stop {
+  animation-name: race;
+  animation-duration: 2s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-in; */
+}
+
+.signal.stop,
+.signal.go-go {
+  background-color: gray;
+}
+
+.signal.go {
+  background-color: red;
+}
+
+@keyframes race {
+  0% {
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes race-started {
+  100% {
+    background-color: gray;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .light {
+    width: 50px;
+    height: 120px;
+  }
+
+  .signal {
+    height: 35px;
+    width: 35px;
+  }
+}
