@@ -91,10 +91,10 @@ const LightBox = () => {
   };
 
   const inputHandler = useCallback(() => {
-    clearTimeout(raceStartRef.current);
     if (raceState !== RACE_STARTED) {
       return;
     }
+    clearTimeout(raceStartRef.current);
     const r = performance.now();
     setReactionTime([reactionTime[0], r]);
     setRaceState(RACE_COMPLETED);
@@ -112,7 +112,7 @@ const LightBox = () => {
     if (raceState === RACE_COMPLETED) {
       return (
         <div className="message">
-          <h2>{`${REACTTION_MESSAGE} ${reactionTime[1] - reactionTime[0]} ms`}</h2>
+          <h2>{`${REACTTION_MESSAGE} ${Number(reactionTime[1] - reactionTime[0]).toFixed(4)} ms`}</h2>
           <button className="try-again-btn" onClick={startOverAgain}>
             try again
           </button>

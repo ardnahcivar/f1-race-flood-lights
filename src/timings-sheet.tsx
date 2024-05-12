@@ -9,7 +9,7 @@ const TimingSheet = (props) => {
         .sort((a, b) => a - b)
         .map((timing) => (
           <div className="timing">
-            <p>{`${timing}ms`}</p>
+            <p>{`${Number(timing).toFixed(4)}ms`}</p>
           </div>
         ))}
     </div>
